@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function search() {
+            var nm = document.getElementsByName("mydiv");
+            var count = 0;
+            var index;
+
+            for (let i = 0; i < nm.length; i++) {
+                if (document.getElementById(nm[i].id).innerHTML == "training") {
+                    count++;
+                    index = i + 1;
+                }
+            }
+            if (count > 0) {
+                alert("Training is found at index: " + index);
+            }else{
+                alert("Not present")
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="a" name="mydiv">running</div>
+    <div id="b" name="mydiv">swimming</div>
+    <div id="c" name="mydiv">here the word training is</div>
+    <button type="button" name="button" onclick="search()">Search_Div</button>
+</body>
+
+</html>

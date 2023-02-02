@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function evenno() {
+            var n = parseInt(document.getElementById("num").value);
+            for (let index = 1; index <= n; index++) {
+
+                if (index % 2 == 0) {
+                    document.getElementById("mydiv").innerHTML += index + "<br>"
+                }
+            }
+        }
+        function res(){
+            document.getElementById("mydiv").innerHTML =" ";
+        }
+    </script>
+
+</head>
+
+<body>
+    <FORM >
+    <label for="num">Enter the number upto which you want to find even numbers</label>
+    <input type="number" id="num" name="num">
+    <!-- <input type="submit" value="Submit" onclick="evenno()"/> -->
+    <button type="button" name="btn" id="btn" onclick="evenno()">Find even numbers</button>
+    <!-- button type="submit sends data to server and reset all components
+        type="button" dont reset 
+
+        " -->
+    <button type="reset" name="rst" id="rst" value="cancel" onclick="res()">Reset</button>
+    <div id="mydiv">Hello </div>
+</FORM>
+</body>
+
+</html>

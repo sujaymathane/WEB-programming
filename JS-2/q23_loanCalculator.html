@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 2px solid blue;
+            height: 300px;
+            width: 500px;
+        }
+    </style>
+
+    <script>
+        function loanCalculator(){
+            var loan=parseInt(document.getElementById("amt").value);
+            if (loan>1500000) {
+                alert("Invalid amount") 
+        }
+            var intrest=parseInt(document.getElementById("int").value);
+            var years=parseInt(document.getElementById("yrs").value);
+            if (years<7 && years>15) {
+                alert("Enter years in between 7 to 15");
+            }
+            var monthly=parseInt(((loan+(loan*intrest/100))/(years*12)));
+            // alert(monthly);
+           document.getElementById("month").value=monthly;
+           var totPay=parseInt(loan+(loan*intrest/100));
+           document.getElementById("tot").value=totPay;
+           var totInt=parseInt(loan*intrest/100);
+           document.getElementById("totint").value=totInt;
+    }
+    </script>
+    
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2"><h3>Enter Loan Information</h3></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td><label for="amt">1)Amount of the loan(any currency)</label></td>
+            <td><input type="text" name="amt" id="amt" placeholder="must be < 15Lakhs"></td>            
+        </tr>
+
+        <tr>
+            <td><label for="int">2)Annual percentage rate of intrest</label></td>
+            <td><input type="text" name="int" id="int"></td>            
+        </tr>
+
+        <tr>
+            <td><label for="yrs">3)Repayment period in years</label></td>
+            <td><input type="text" name="yrs" id="yrs" placeholder="Must be between 7 to 15"></td>            
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><button type="button" id="compute" onclick="loanCalculator()">Compute</button></td>
+        </tr>
+
+        <tr>
+            <td><h3>Payment Information:</h3></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td> <label for="month">4)Your monthly payment will be</label></td>
+            <td><input type="text" name="month" id="month"></td>
+        </tr>
+
+        <tr>
+            <td> <label for="tot">5)Your total payment will be</label></td>
+            <td><input type="text" name="tot" id="tot"></td>
+        </tr>
+
+        <tr>
+            <td> <label for="totint">6)Your total intrest payments will be</label></td>
+            <td><input type="text" name="totint" id="totint"></td>
+        </tr>
+
+    </table>
+</body>
+</tot

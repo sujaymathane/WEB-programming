@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="q14_class.js"></script>
+    <script>
+        function rect(){
+            var l=parseInt(prompt("Enter the lenght"));
+            var b=parseInt(prompt("Enter the width "));
+            var myrec=new Rectangle(l,b);
+            document.getElementById("mydiv").innerHTML="Area of rectangle is: " + myrec.rectangleArea() + " Perimeter of the rectangle: "+ myrec.rectanglePerimeter();
+        }
+        
+        function cir(){
+            var r=parseInt(prompt("Enter the radius"));
+            var mycir=new Circle(r);
+            document.getElementById("mydiv").innerHTML="Area of circle is: "+ mycir.circleArea()+"<br>Perimeter of circle: "+ mycir.circlePerimeter();
+        }
+
+
+    </script>
+</head>
+<body>
+    <button type="submit" name="rect" id="rect" onclick="rect()">Rectangle</button>
+    <button type="submit" name="circle" id="circle" onclick="cir()">Circle</button>
+    <div id="mydiv"></div>
+</body>
+</html>

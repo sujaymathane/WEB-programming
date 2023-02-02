@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=["www.msn.com","www.google.com/","www.amazon.in","in.answer.yahoo.com","en.m.wikipedia.com","codehs.gitbooks.com","www.coderanch.com"];
+
+        function www(){
+            var count=0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].startsWith("www")) {
+                    count++;
+                }
+
+                document.getElementById("mydiv").innerHTML=count +" <= Total number of sites starts with www";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button type="submit" onclick="www()">click to see www(nos)</button>
+    <div id="mydiv"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function circle() {
+            var r=parseInt(document.getElementById("radius").value);
+
+            document.getElementById("are").innerHTML=3.14*r*r;
+            document.getElementById("peri").innerHTML=Math.round(3.14*2*r);
+        }
+    </script>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+    <th><label for="radius">Enter the radius</label></th>
+    <td><input type="text" name="radius" id="radius"></td>
+       </tr>
+
+       <tr>
+        <td></td>
+        <th><button type="submit" name="sbmt" id="sbmt" onclick="circle()"><b>Submit</b></button></th>
+       </tr>
+
+       <tr>
+        <td>Area of circle</td>
+        <td><b><textarea cols="23" id="are" ></textarea></b></td>
+       </tr>
+
+       <tr>
+        <td>Circumference of circle</td>
+        <td><textarea cols="23" id="peri" ></textarea></td>
+       </tr>
+
+
+</table>
+</body>
+</html>

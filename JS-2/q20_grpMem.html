@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myform{ border: 2px solid black;
+            font-size: medium;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            height: 200px;
+            } 
+            body{
+                background-color:beige;
+            }  
+    </style>
+    <script>
+        function names(){
+            document.getElementById("mydiv").innerHTML="";
+            var arr=["akshay","radhe","arjun","bheem","rajkamel"];
+            var str="";
+            for(var i=0;i<arr.length-1;i++){
+                str += arr[i].toUpperCase()+",";
+            }
+            str+=arr[arr.length -1].toUpperCase();
+            document.getElementById("mydiv").innerHTML=str;
+    }
+
+
+    </script>
+</head>
+<body>
+    <form id="myform">
+        <h3>Members of my Group are</h3>
+        <button type="button" id="submit" onclick="names()">Click to show</button><br><br><br>
+        <div id="mydiv"></div>
+    </form>
+    
+</body>
+</html>

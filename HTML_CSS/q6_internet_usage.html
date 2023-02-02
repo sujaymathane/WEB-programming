@@ -1,0 +1,112 @@
+<html>
+
+<body style="border-color:blue;border: 2px solid;border-color: blue;">
+    <form style="border: 1cm;">
+    <table>
+       
+            <tr><td><h1>Internet Usage Survey</h1></td></tr>
+            <tr><td colspan="2">This survey is conducted to uderstand the usage pattern of our customer</td></tr>
+            <tr><td colspan="2">Please take a few moment to complete and submit this short form.Thank you for your cooperation</td></tr>
+            <tr>
+                <td align="left" width="450">What are of Internet connection do you have?<br>(select any one)</td>
+                <td width="300">
+                    <select id="conne" name="conne" size="4">
+                        <option value="Dial-up">Dial-up</option>
+                        <option value="DSL">DSL</option>
+                        <option value="High speed Cable">Dial-up</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>What type of computer do you use most at home?</td>
+                <td>
+                    <input type="radio" name="deks" id="desk">Desktop
+                    <input type="radio" name="deks" id="lapt">laptop<br>
+                </td>
+            </tr>
+            <tr>
+                <td>How would you describe your main reason for using Internet
+                    ?</td>
+                <td><br>
+                    <input type="radio" name="work" id="work">To do work-related activities<br>
+                    <input type="radio" name="work" id="school">To do school-related activities<br>
+                    <input type="radio" name="work" id="entertainment">For etertainmetn pupose<br>
+                    <input type="radio" name="work" id="other">other activities<br>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 150;">
+                    <fieldset>
+                        <legend>Types of site visited</legend>
+                        What types of websites do you access most often?<br>
+                        Check all that apply.<br>
+                        <input type="checkbox" name="self" id="self">Self Improvement<br>
+                        <input type="checkbox" name="enter" id="enter">Entertainment<br>
+                        <input type="checkbox" name="enter" id="enter">News and sport<br>
+                        <input type="checkbox" name="enter" id="enter">Reference<br>
+                        <input type="checkbox" name="enter" id="enter">Email<br>
+                    </fieldset>
+
+                </td>
+                <td style="height: 150;">
+                    <fieldset>
+                        <legend>Time spent using Interner</legend>
+                        During an average week how long do you spend online?<br>
+
+                        <input type="radio" name="option" id="0-3" checked>0-3<br>
+                        <input type="radio" name="option" id="4-6">4-6<br>
+                        <input type="radio" name="option" id="7-10">7-10<br>
+                        <input type="radio" name="option" id="11-14">11-14<br>
+                        <input type="radio" name="option" id="15+">15+<br>
+
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Please comment on your opinion concerning Internet privacy and safety <br>
+                    <textarea rows="5" cols="100" name="opinion" id="opinion"></textarea>
+                </td>
+
+            </tr>
+
+            <tr>
+                <br>
+                <td>
+                    First Name:
+                    <input type="text" name="name" id="name">
+                </td>
+                <td>
+                    Last Name:
+                    <input type="text" name="lname" id="name">
+                </td>
+            </tr>
+
+            <tr>
+                <br>
+                <td>
+                    Age:
+                    <input type="number" name="age" id="age">
+                </td>
+                <td>
+                    Zip code:
+                    <input type="number" name="zip" id="zip">
+                </td>
+            </tr>
+
+
+       
+    </table>
+    <div  align="center">
+        <td>
+            <button type="button" name="submit" id="sub">Click to submit</button>
+            <button type="reset" name="reset" id="res">Reset</button>
+
+        </td>
+
+    </div>
+</form>
+</body>
+
+</html>

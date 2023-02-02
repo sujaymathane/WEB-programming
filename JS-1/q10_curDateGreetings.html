@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showdate() {
+
+            var dt = new Date();
+            var d = dt.getDate();
+            var day = dt.toLocaleString('default', { weekday: 'long' });
+            var m = dt.toLocaleString('default', { month: 'long' });
+            var y = dt.getFullYear();
+            var last = new Date("2022/12/31");
+            var daysRem = parseInt((last - dt) / (1000 * 24 * 3600), 10);
+            var time = dt.getHours();
+            var greeting;
+
+            if (time > 0 && time < 12) {
+                greeting = "Good Morning"
+            } else if (time >= 12 && time <= 16) {
+                greeting = "Good Afternoon"
+            } else {
+                greeting = "Good Evening"
+            }
+
+            document.getElementById("mydiv").innerHTML = "<h4>Today is " + day + "," + d + " " + m + " " + " " + y + "," + " Welcome, and " + greeting + " to you.<h4>";
+            document.getElementById("mydiv").innerHTML += "<h4>Number of days left till end of year are " + daysRem;
+
+        }
+    </script>
+</head>
+
+<body onload="showdate()">
+    <div id="mydiv">
+
+    </div>
+
+</body>
+
+</html>

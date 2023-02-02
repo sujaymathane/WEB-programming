@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mytable {
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px;
+            width: 700px;
+            height: 350px;
+        }
+    </style>
+    <script>
+        function custval() {
+            var c = document.getElementById("cust").value
+            if (c.length > 6) {
+                document.getElementById("custtd").innerHTML = " ";
+                return true;
+            } else {
+                document.getElementById("custtd").innerHTML = "Length must be >5";
+                return false;
+            }
+        }
+
+        function billdate() {
+            var b = new Date(document.getElementById("bill").value);
+            var s = new Date(document.getElementById("ship").value);
+            if (b.getTime() > s.getTime()) {
+                document.getElementById("billtd").innerHTML = "Bill date must be before than shipping date";
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function object() {
+            if (custval() && billdate()) {
+                var oid = document.getElementById("cust").value
+                var cu = document.getElementById("ord").value
+                var bd = new Date(document.getElementById("bill").value);
+                var sd = new Date(document.getElementById("ship").value);
+                var total=parseInt(document.getElementById("ord").value);
+                var bdd=bd.getFullYear() + "-" + bd.getMonth() + "-" + bd.getDay();
+                var sdd=sd.getFullYear() + "-" + sd.getMonth() + "-" + sd.getDay();
+                document.getElementById("1d").innerHTML="Order ID: "+ oid;
+                document.getElementById("2d").innerHTML="Customer Name: "+ cu;
+                document.getElementById("3d").innerHTML="Billing Date: "+ bdd;
+                document.getElementById("4d").innerHTML="Shipping Date: "+ sdd;
+
+            } else {
+                alert("Date or customer name is not valid")
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <table id="mytable">
+        <tr>
+            <th> <label for="ord">Order ID </label></th>
+            <td><input type="text" name="ord" id="ord"></td>
+            <td id="ordtd"></td>
+        </tr>
+        <tr>
+            <th><label for="cust">Cust Name</label></th>
+            <td><input type="text" id="cust" pattern="{6,}"></td>
+            <td id="custtd" style="color: red;"> </td>
+        </tr>
+
+        <tr>
+            <th><label for="bill">Enter Billing Date</label></th>
+            <td><input type="date" id="bill"></td>
+            <td id="billtd" style="color: red;"></td>
+        </tr>
+
+        <tr>
+            <th><label for="ship">Enter shipping date</label></th>
+            <td><input type="date" id="ship" name="ship"></td>
+            <td id="shiptd"></td>
+        </tr>
+
+        <tr>
+            <th><label for="tot">Order Total</label></th>
+            <td><input type="text" id="tot" name="tot"></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td><button type="submit" id="sbmt" name="sbmt" onclick="object()">Submit</button></td>
+        </tr>
+
+        <tr>
+            <td>
+                <div id="1d"></div><br>
+                <div id="2d"></div><br>
+                <div id="3d"></div><br>
+                <div id="4d"></div><br>
+            </td>
+        </tr>
+
+
+    </table>
+</body>
+
+</html>

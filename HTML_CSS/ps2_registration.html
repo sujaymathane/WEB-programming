@@ -1,0 +1,77 @@
+<html>
+    <body style="background-color:white;">
+        <fieldset style="width: 500px;height: 250px; color: blueviolet; width: 80%; align-self: center;">
+            <legend style="color: rgb(0, 0, 0);">Registration Details</legend>
+            <form>
+        <table>
+            
+               <tr>
+                <td align="left" style="width: 300px;">
+                 <label for="name">University:</label>
+                </td>
+                <td align="right">
+                    <input type="text" name="univer" id="univer">
+                </td>
+
+               </tr>
+
+               <tr><td>Institute</td>
+                <td><input type="text" name="insti" id="insti"></td>
+               </tr>
+
+               <tr>
+                <td>Branch</td>
+                <td><select name="branch" id="branch" size="2">
+                    <option value="select">---select one---</option>
+                    <option value="Civil">Civil</option>
+                    <option value="CSE">CSE</option>
+                </select>
+                </td>
+               </tr>
+
+                <tr>
+                    <td>Degree</td>
+                    <td>
+                        <select name="Degree" id="Degree" size="1">
+                            <option value="select">--select one--</option>
+                            <option value="B.E">B.E</option>    
+                            <option value="B.Tech">B.Tech</option>  
+                        </select>
+                        <input type="radio" name="persuing" id="persuing">persuing
+                        <input type="radio" name="persuing" id="completed">Completed
+
+                    </td>
+                </tr>   
+                <tr>
+                    <td>Average CPI: </td>
+                    <td>
+                        <input type="number" name="cpi" id="cpi" size="5" min="4.00" max="10">Upto
+                        <input type="number" name="sem" id="sem" size="2" min="1.00" max="8"> Th semester
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Experience</td>
+                    <td>
+                        <input type="number" name="exp" id="exp" size="2">Years
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Your website or blog:
+                    </td>
+                    <td> <input type="url" name="site" id="site">
+                    </td>
+                
+                
+                </tr>
+           
+        </table><input type="submit"> 
+    </form>
+        </fieldset>
+        
+
+    </body>
+</html>

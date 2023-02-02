@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 2px solid black;
+            font-size: larger;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        body {
+            background-color: blanchedalmond;
+        }
+    </style>
+    <script>
+        function myfuction() {
+            var str = document.getElementById("strng").value;
+            var sub = document.getElementById("substrng").value;
+            var rep = document.getElementById("replcstrng").value;
+            var op = document.getElementsByName("menu");
+
+            for (var i = 0; i < op.length; i++) {
+                if (op[i].checked) {
+                    switch (op[i].id) {
+                        case 'search':
+                            if ((str.includes(sub))) {
+                                document.getElementById("result").innerHTML = "Given substring is present in string";
+                            } else {
+                                document.getElementById("result").innerHTML = "Given substring is not present in string";
+                            }
+                            break;
+
+                        case 'upper':
+                            document.getElementById("result").innerHTML = str.toUpperCase();
+                            break;
+
+                        case 'lower':
+                            document.getElementById("result").innerHTML = str.toLowerCase();
+                            break;
+
+                        case 'Trim':
+                            document.getElementById("result").innerHTML = str.trim();
+                            break;
+
+                        case 'Concatenate':
+                            document.getElementById("result").innerHTML = str.concat(sub);
+                            break;
+
+                        case 'replace':
+                            document.getElementById("result").innerHTML = str.replace(sub,rep); //not working
+                            break;
+                        default:
+                            break;
+
+                    }
+                }
+            }
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <table id="mytable">
+        <tr>
+            <th align="left" width="30%">Enter String</th>
+            <td><input type="text" name="strng" id="strng"></td>
+        </tr>
+        <tr>
+            <th align="left">Enter Sub-String</th>
+            <td><input type="text" name="substrng" id="substrng"></td>
+        </tr>
+        <tr>
+            <th align="left">Replace with String</th>
+            <td><input type="text" name="replcstrng" id="replcstrng"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p>
+                    <label for="search">Search substring in main string</label><input type="radio" name="menu"
+                        id="search">
+                    <label for="upper">To Upper case</label><input type="radio" name="menu" id="upper">
+                    <label for="lower">To lower case</label><input type="radio" name="menu" id="lower">
+                    <label for="Trim">Trim spaces</label><input type="radio" name="menu" id="Trim">
+                    <label for="Concatenate">Concatenate</label><input type="radio" name="menu" id="Concatenate">
+                    <label for="replace">Replace</label><input type="radio" name="menu" id="replace">
+                </p>
+            </td>
+        </tr>
+        <tr>
+
+            <td><button type="submit" name="sbmit" id="sbmit" onclick="myfuction()">Submit Querry</button></td>
+            <td><textarea id="result" placeholder="Answer" cols="40" style="font-size: larger;"></textarea></td>
+
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Appointment Scheduler</h1>
+    <fieldset style="width: 500; height: 250px;">
+        <legend>Personal Information</legend>
+        <table>
+            <tr>
+
+                <label for="name">Name</label><br>
+                <input type="text" name="name" id="name"><br><br>
+                <label for="tele">Telephone Number</label><br>
+                <input type="text" name="tele" id="tele" maxlength="10"><br><br>
+                <label for="email">E-mail address</label><br>
+                <input type="email" name="email" id="email"><br><br>
+                <label for="birth">Date of Birth</label><br>
+                <input type="date" name="birth" id="birth">
+
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset style="width: 500; height: 250px;">
+        <legend>Appointment Request</legend>
+        <tr>
+            <label for="reason">What is the reason for your visit?</label><br>
+            <input type="text" name="reason" id="reason" placeholder="select or type reason"><br><br>
+            Current Pain level<br>
+            <input type="range"><br>
+            <label for="apdt">Preferred Appointment date?</label><br>
+            <input type="date" name="apdt" id="apdt"><br><br>
+            <label for="apt">Preferred time</label><br>
+            <input type="number" max="24" size="4">
+        </tr>
+    </fieldset>
+
+    <button type="submit" name="submit" id="submit">Set Appointment</button>
+
+</body>
+
+</html>

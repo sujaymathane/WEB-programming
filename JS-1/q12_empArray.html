@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ArrSorted() {
+            var a = prompt("Enter Name: ");
+            var b = prompt("Enter Name: ");
+            var c = prompt("Enter Name: ");
+            var d = prompt("Enter Name: ");
+            var e = prompt("Enter Name: ");
+            var f = prompt("Enter Name: ");
+            var arr = [a, b, c, d, e, f];
+            arr.sort();
+            document.getElementById("mydiv").innerHTML += arr;
+        }
+
+    </script>
+</head>
+
+<body>
+    <button type="submit" onclick="ArrSorted()">Click to Enter Names and sort them</button>
+    <div id="mydiv"></div>
+</body>
+
+</html>

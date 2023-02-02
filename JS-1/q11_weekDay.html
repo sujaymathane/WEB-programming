@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function weekDay() {
+            var dt = new Date(document.getElementById("dte").value);
+            var day = dt.toLocaleString('default', { weekday: 'long' });
+            alert(day.substr(0,3));
+            document.getElementById("mydiv").innerHTML = "<br><b>Todays date is " + dt + " And WeekDay is " + (day.substr(0, 3))+"<b>";
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <label for="dte"><b>Enter the date to see the week day in format of yyyy/mm/dd </b></label>
+    <input type="text" name="dte" id="dte">
+    <button type="submit" onclick="weekDay()">Submit to see weekDay</button>
+
+    <div id="mydiv">
+
+
+    </div>
+</body>
+
+</html>
